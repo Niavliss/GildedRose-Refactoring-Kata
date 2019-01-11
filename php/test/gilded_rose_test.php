@@ -1,14 +1,13 @@
 <?php
 
-require_once 'gilded_rose.php';
+require_once '..\src\gilded_rose.php';
 
-class GildedRoseTest extends PHPUnit_Framework_TestCase {
+class GildedRoseTest extends PHPUnit_Framework_TestCase  {
 
-    function testFoo() {
-        $items = array(new Item("foo", 0, 0));
+    function agedBrieQualityIncreased() {
+        $items = array(new Item("Aged Brie", 6, 9));
         $gildedRose = new GildedRose($items);
         $gildedRose->update_quality();
-        $this->assertEquals("fixme", $items[0]->name);
-    }
-
+        $this->assertEquals( $items[0]->name,$item->quality= 10);
+    }    
 }
