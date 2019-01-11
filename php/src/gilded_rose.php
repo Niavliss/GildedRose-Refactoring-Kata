@@ -1,5 +1,8 @@
 <?php
 
+require_once 'Class/ProductClass.php';
+require_once 'Class/BrieClass.php';
+
 class GildedRose {
 
     private $items;
@@ -55,7 +58,8 @@ class GildedRose {
 
             switch ($item->name) {
                 case "Aged Brie":
-                    $this->manageAgedBrie($item);
+                    $brie = new BrieClass($item->$name, $item->$sell_in, $item->$quality);
+                    $brie->manageAgedBrie($item);
                     break;
                 case "Aging Red Wine":
                     $this->manageAgingRedWine($item);
